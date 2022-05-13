@@ -1,0 +1,25 @@
+{
+  "name": "small_snabbdom",
+  "version": "1.0.0",
+  "description": "realize snabbdom",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benjaminbai/small_snabbdom.git"
+  },
+  "author": "benjamin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benjaminbai/small_snabbdom/issues"
+  },
+  "homepage": "https://github.com/Benjaminbai/small_snabbdom#readme",
+  "devDependencies": {
+    "webpack": "5",
+    "webpack-cli": "3",
+    "webpack-dev-server": "3"
+  }
+}
