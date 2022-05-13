@@ -3,23 +3,13 @@ import h from './smallSnabbdom/h.js'
 import patch from './smallSnabbdom/patch.js'
 
 // const vn1 = h('h1', {}, 'hello')
-const vn1 = h('ul', {}, [
-    h('li', {}, 'A'),
-    h('li', {}, 'B'),
-    h('li', {}, 'C'),
-    h('li', {}, [
-        h('div', {}, [
-            h('p', {}, '1'),
-            h('p', {}, '2'),
-            h('p', {}, '3'),
-        ])
-    ]),
-])
+const vn1 = h('section', {}, '老的是文字')
 
 const vn2 = h('section', {}, [
-    h('h1', {}, 'a'),
-    h('h2', {}, 'b'),
-    h('h3', {}, 'c'),
+    h('p', {}, 'a'),
+    h('p', {}, 'b'),
+    h('p', {}, 'c'),
+    h('p', {}, 'd'),
 ])
 const container = document.getElementById('container')
 const btn = document.getElementById('btn')
