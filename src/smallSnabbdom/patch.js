@@ -1,5 +1,6 @@
 import vnode from "./vnode";
 import createElment from "./createElment";
+import patchVnode from "./patchVnode";
 
 export default function (oldVnode, newVnode) {
     if (oldVnode.sel == '' || oldVnode.sel == undefined) {
@@ -8,23 +9,7 @@ export default function (oldVnode, newVnode) {
 
     if (oldVnode.sel === newVnode.sel && oldVnode.key === newVnode.key) {
         console.log('same node')
-        if (oldVnode === newVnode) return
-        if (newVnode.text != undefined && (newVnode.children == undefined || newVnode.children.length == 0)) {
-            if (newVnode.text != oldVnode.text) {
-                oldVnode.elm.innerText = newVnode.text
-            }
-        } else {
-            if (oldVnode.children != undefined && oldVnode.children.length > 0) {
-
-            } else {
-                oldVnode.elm.innerText = ''
-                for (let i = 0; i < newVnode.children.length; i++) {
-                    let dom = createElment(newVnode.children[i])
-                    oldVnode.elm.appendChild(dom)
-
-                }
-            }
-        }
+        patchVnode(oldVnode, newVnode)
     } else {
         console.log('not same node')
         let newVnodeElm = createElment(newVnode)
